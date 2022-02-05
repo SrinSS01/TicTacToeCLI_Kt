@@ -1,5 +1,6 @@
-headers = ncurses/ncurses.h
-headerFilter = ncurses/* ncursesw/*
+headers = ncurses.h
 
+compilerOpts.linux = -I/usr/include -I/usr/include/ncursesw
 compilerOpts.mingw = -I"C:\\tools\\msys64\\mingw64\\include" -I"C:\\tools\\msys64\\mingw64\\include\\ncursesw"
 linkerOpts.mingw = -L"C:\\tools\\msys64\\mingw64\\lib" -lncurses
+linkerOpts.linux = -L/usr/lib/x86_64-linux-gnu -lncurses
